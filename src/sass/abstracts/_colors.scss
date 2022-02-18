@@ -1,0 +1,21 @@
+$colors: (
+  blues: (
+    500: #045097,
+    600: #0a6ca0,
+    700: #0e7baa,
+    800: #1288b3,
+    900: #1a9cc5,
+  ),
+  oranges: (
+    500: #e06703,
+    600: #d85f03,
+    700: #d05003,
+    800: #c64c03,
+    900: #b94403,
+  ),
+);
+
+@function getColor($base, $shade) {
+  $color: map-get(map-get($colors, $base), $shade);
+  @return $color;
+}

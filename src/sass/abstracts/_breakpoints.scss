@@ -1,0 +1,13 @@
+$breakpoints: (
+  small: 40rem,
+  medium: 60rem,
+  large: 64rem,
+  xlarge: 80rem,
+  xxlarge: 96rem,
+  xxxlarge: 112rem,
+);
+
+@function getBreakpoints($breakpoint) {
+  $size: map-get($breakpoints, $breakpoint);
+  @return $size;
+}

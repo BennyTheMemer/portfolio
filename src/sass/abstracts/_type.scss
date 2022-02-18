@@ -1,0 +1,24 @@
+$type-scale: (
+  small: (
+    300: 1rem,
+    400: 1.25rem,
+    500: 1.5rem,
+    600: 1.75rem,
+    700: 2.44rem,
+    800: 3.2rem,
+    900: 4.2rem,
+  ),
+  big: (
+    300: 1.25rem,
+    400: 1.25rem,
+    500: 2rem,
+    600: 2.8rem,
+    700: 4rem,
+    800: 5.6rem,
+  ),
+);
+
+@function getScale($size, $scale) {
+  $font-size: map-get(map-get($type-scale, $size), $scale);
+  @return $font-size;
+}
